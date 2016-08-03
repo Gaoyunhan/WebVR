@@ -60,14 +60,8 @@
     floor.rotation.x = -Math.PI / 2;
     scene.add(floor);
 
-    // // Create box
-    // var geometry = new THREE.BoxGeometry(6, 6, 6);
-    // var material = new THREE.MeshNormalMaterial();
-    // cube = new THREE.Mesh(geometry, material);
-    // cube.position.set(-15, 30, 10);
-    // scene.add(cube);
 
-    //Create text
+    //Create text-name
     var textGeometry1 = new THREE.TextGeometry(name, {
       size: 4,
       height: 1
@@ -78,6 +72,28 @@
     text1.position.set(15, 15, -25);
     text1.rotation.set(0, 30, 0);
     scene.add(text1);
+    //Create text-email
+    var textGeometry2 = new THREE.TextGeometry(email, {
+      size: 4,
+      height: 1
+    });
+    var text2 = new THREE.Mesh(textGeometry2, new THREE.MeshBasicMaterial({
+      color: 0x4169E1
+    }));
+    text2.position.set(15, 15, -15);
+    text2.rotation.set(0, 30, 0);
+    scene.add(text2);
+    //Create text-Wechat
+    var textGeometry3 = new THREE.TextGeometry(WeChat, {
+      size: 4,
+      height: 1
+    });
+    var text3 = new THREE.Mesh(textGeometry3, new THREE.MeshBasicMaterial({
+      color: 0x4169E1
+    }));
+    text3.position.set(15, 15, -5);
+    text3.rotation.set(0, 30, 0);
+    scene.add(text3);
     
     animate();
   }
