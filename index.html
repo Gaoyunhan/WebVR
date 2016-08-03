@@ -18,7 +18,7 @@
   <script src="./js/helvetiker_regular.typeface.js"></script>
 
   <script>
-  var scene, camera, renderer, effect, element, controls, word = "Ritter's VR World", cube;
+  var scene, camera, renderer, effect, element, controls, word = "I'm Gao yunhan", cube;
   init();
 
   function init() {
@@ -48,7 +48,7 @@
     scene.add(light);
 
     // Create floor
-    var floorTexture = THREE.ImageUtils.loadTexture('img/grass.jpg');
+    var floorTexture = THREE.ImageUtils.loadTexture('img/bg.jpg');
     floorTexture.wrapS = THREE.RepeatWrapping;
     floorTexture.wrapT = THREE.RepeatWrapping;
     floorTexture.repeat = new THREE.Vector2(50, 50);
@@ -60,12 +60,12 @@
     floor.rotation.x = -Math.PI / 2;
     scene.add(floor);
 
-    // Create box
-    var geometry = new THREE.BoxGeometry(6, 6, 6);
-    var material = new THREE.MeshNormalMaterial();
-    cube = new THREE.Mesh(geometry, material);
-    cube.position.set(-15, 30, 10);
-    scene.add(cube);
+    // // Create box
+    // var geometry = new THREE.BoxGeometry(6, 6, 6);
+    // var material = new THREE.MeshNormalMaterial();
+    // cube = new THREE.Mesh(geometry, material);
+    // cube.position.set(-15, 30, 10);
+    // scene.add(cube);
 
     //Create text
     var textGeometry = new THREE.TextGeometry(word, {
@@ -73,7 +73,7 @@
       height: 1
     });
     var text = new THREE.Mesh(textGeometry, new THREE.MeshBasicMaterial({
-      color: 0xffffff
+      color: 0x000000
     }));
     text.position.set(15, 15, -25);
     text.rotation.set(0, 30, 0);
