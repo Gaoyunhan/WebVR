@@ -18,7 +18,7 @@
   <script src="./js/helvetiker_regular.typeface.js"></script>
 
   <script>
-  var scene, camera, renderer, effect, element, controls, word = "I'm Gao yunhan", cube;
+  var scene, camera, renderer, effect, element, controls, name = "Gao yunhan",Email = "gaoyunhan123456@gmail.com", WeChat = "i-am-cupid";
   init();
 
   function init() {
@@ -68,16 +68,16 @@
     // scene.add(cube);
 
     //Create text
-    var textGeometry = new THREE.TextGeometry(word, {
-      size: 5,
+    var textGeometry1 = new THREE.TextGeometry(name, {
+      size: 3,
       height: 1
     });
-    var text = new THREE.Mesh(textGeometry, new THREE.MeshBasicMaterial({
+    var text1 = new THREE.Mesh(textGeometry1, new THREE.MeshBasicMaterial({
       color: 0x4169E1
     }));
-    text.position.set(30, 30, -25);
-    text.rotation.set(0, 30, 0);
-    scene.add(text);
+    text1.position.set(30, 30, -25);
+    text1.rotation.set(0, 30, 0);
+    scene.add(text1);
 
     animate();
   }
