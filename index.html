@@ -69,16 +69,16 @@
 
     //Create text
     var textGeometry1 = new THREE.TextGeometry(name, {
-      size: 3,
+      size: 4,
       height: 1
     });
     var text1 = new THREE.Mesh(textGeometry1, new THREE.MeshBasicMaterial({
       color: 0x4169E1
     }));
-    text1.position.set(30, 30, -25);
+    text1.position.set(15, 15, -25);
     text1.rotation.set(0, 30, 0);
     scene.add(text1);
-
+    
     animate();
   }
 
